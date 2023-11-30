@@ -1,0 +1,151 @@
+body {
+    background-color: #8CC461;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+  
+  }
+  
+  ul {
+    list-style-type: none;
+    line-height: 30px;
+  }
+  
+  #heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: linear-gradient(0deg, rgba(28, 48, 120, 0), rgba(28, 48, 120, 0)),
+      linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border: 2px solid rgb(255, 255, 255);
+    width: 60%;
+    border-radius: 8px;
+    margin-left: 20%;
+    margin-top: 3%;
+    color: white;
+    padding: 5px;
+  }
+  
+  #text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  
+  #text span {
+    margin-bottom: 1px;
+  }
+  
+  #scores {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .box {
+    background-color: white;
+    padding: 10px;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 5px;
+    text-align: center;
+    color: #656565;
+  }
+  
+  .pla {
+    font-size: 2vh;
+    line-height: 0%;
+  }
+  
+  .inc {
+    font-size: 6vh;
+    font-weight: bolder;
+    color: #252525
+  }
+  
+  
+  
+  .secpart{
+    display: flex;
+              flex-direction: column;
+              align-items: center;
+              position: relative;
+  }
+  
+  .images {
+    display: flex;
+    justify-content: space-between;
+    width: 300px; /* Adjust the container width as needed */
+    margin-top: 20px; /* Adjust the margin between combined images as needed */      
+  } 
+  
+  .paired {
+    position: relative;
+              width: 100px; /* Adjust the combined image width as needed */
+              height: auto;
+  }
+  .circle {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .hand {
+    position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 40px; /* Adjust the icon image size as needed */
+              height: auto;
+  }
+  
+  
+  
+  .line-image {
+              width: 20px; /* Adjust the line image width as needed */
+              height: 100px; /* Adjust the line image height as needed */
+  }
+              
+  /* Specific positioning for the first image pair  */
+  .paired:nth-child(1) {
+    margin-right: 50px;
+  }
+  
+  /* Specific positioning for the second image pair */
+  .paired:nth-child(2) {
+    margin-left: 25px; /* Adjust the margin between combined images as needed */
+    margin-right: 25px;
+    
+  }
+  
+  /* Specific positioning for the third image pair */
+  .paired:nth-child(3) .hand{
+    margin-left: 1px; /* Adjust the margin between combined images as needed */
+  }
+  
+  .line-image {
+    position: absolute;
+  }
+  
+  .line-1 {
+    top: 50%;
+    left: calc(50% - 15px); /* Adjust the left position as needed */
+  }
+  
+  .line-2 {
+    top: calc(50% - 75px); /* Adjust the top position as needed */
+    left: calc(50% - 65px); /* Adjust the left position as needed */
+    transform: rotate(60deg);
+  }
+  
+  .line-3 {
+    top: calc(10% + 75px); /* Adjust the top position as needed */
+    left: calc(50% - 45px); /* Adjust the left position as needed */
+    transform: rotate(-90deg);
+  }
+  #sci{
+    width: 25px;
+  } 
+  .pep{
+    margin-top: 80%;
+  }

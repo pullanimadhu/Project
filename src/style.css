@@ -1,0 +1,101 @@
+body {
+  background-color: #8CC461;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+ul {
+  list-style-type: none;
+  line-height: 30px;
+}
+
+#heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: linear-gradient(0deg, rgba(28, 48, 120, 0), rgba(28, 48, 120, 0)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  border: 2px solid rgb(255, 255, 255);
+  width: 60%;
+  border-radius: 8px;
+  margin-left: 20%;
+  margin-top: 3%;
+  color: white;
+  padding: 5px;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+#text span {
+  margin-bottom: 1px;
+}
+
+#scores {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  background-color: white;
+  padding: 10px;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5px;
+  text-align: center;
+  color: #656565;
+}
+
+.pla {
+  font-size: 2vh;
+  line-height: 0%;
+}
+
+.inc {
+  font-size: 6vh;
+  font-weight: bolder;
+  color: #252525
+}
+
+.horozontal{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+
+.paired {
+  position: relative;
+  width: 80px; /* Adjust the container width as needed */
+  height: 80px;
+}
+.circle {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.hand {
+  position:static;
+  top: 19px; /* Adjust this value for vertical position */
+  left: 10px; /* Adjust this value for horizontal position */
+  width: 50px; /* Adjust the overlay image width as needed */
+  height: auto;
+}
+.cent{
+  margin-top: 7%;
+  margin-left: 28%;
+}
+.pep{
+  margin-left: 45%;
+  margin-top: 2% ;
+}
+.scir{
+  margin-left: 50%;
+  margin-bottom: 100%;
+}
