@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="wapper">
+  <div class="wrapper">
 
     <div id="heading">
       <div id="text">
@@ -33,34 +33,68 @@
       </div>
     </div>
 
-    <div class="secpart">
-      <div class="images">
-        <div class="horizontal">
-          <div class="paired cent">
-            <img class="circle fis" id="blu_c" src="src/images/blue_circle.svg" alt="rock_hand">
-            <img class="hand" id="roc" src="src/images/fist.svg" alt="fist">
-          </div>
-          <div class="paired scir">
-            <img class="circle" id="pin_c" src="src/images/pink_circle.svg" alt="rock_hand">
-            <img class="hand" id="sci" src="src/images/scissor.svg" alt="Scissor">
-          </div>
+    <section class="game">
+      <button class="choice-btn adjr" data-choice="rock">
+        <div class="choice rock">
+          <img class="size" src="src/images/hand-rock.svg" alt="Rock" />
         </div>
-        <div class="paired pep" >
-          <img class="circle" id="yel_c" src="src/images/yellow_circle.svg" alt="paper_hand">
-          <img class="hand" id="pap" src="src/images/hand.svg" alt="hand">
-        </div>
-      </div>
+      </button>
 
-      <img class="line-image line1" src="src/images/Line 1.svg" alt="line1">
-      <img class="line-image line2" src="src/images/Line 2.svg" alt="line2">
-      <img class="line-image line3" src="src/images/Line 3.svg" alt="line3">
+        <button class="choice-btn" data-choice="scissors">
+          <div class="choice scissors">
+            <img class="size" src="src/images/hand-scissors.svg" alt="Scissors" />
+          </div>
+        </button>
+
+      <button class="choice-btn" data-choice="paper">
+        <div class="choice paper">
+          <img class="size" src="src/images/hand-paper.svg" alt="Paper" />
+        </div>
+      </button>
+    </section>
+
+
+
+    <section class="results hidden">
+      <h2 class="results__heading">YOU PICKED</h2>
+      <h2 class="results__heading">PC PICKED </h2>
+      <div class="results__result"></div>
+      <div class="results__winner hidden">
+        <h3 class="results__text"></h3>
+        <button class="play-again">PLAY AGAIN</button>
+      </div>
+      <div class="results__result"></div>
+    </section>
+
+
+
+    <!--rules button  -->
+    <button class="rules_btn" onclick="showRules()">RULES</button>
+    <div class="Rules" id="rulesContainer">
+      <div class="rules_container">
+        <header class="outline">
+          <button class="close_btn" onclick="hideRules()">
+            <img src="src/images/closee.svg" alt="Close Button" />
+          </button>
+          <h2 class="heading">Game Rules</h2>
+          <ul style="list-style-type: square; color: white;">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
+            <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.” <br><br></li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time <br><br></li>
+            <li>If both players lay down the same hand, each player lays down another hand <br><br></li>
+          </ul>
+        </header>
+      </div>
     </div>
 
+
+   
 
 
 
 
   </div>
+  <script src="src/script.js"></script>
   
 </body>
 

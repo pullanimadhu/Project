@@ -1,151 +1,158 @@
 body {
-    background-color: #8CC461;
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Roboto', sans-serif;
+  background-color: #8CC461;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+ul {
+  list-style-type: none;
+  line-height: 30px;
+}
+
+
+#heading {
+  display: flex;
+  justify-content: space-between;
+  background-color: linear-gradient(0deg, rgba(28, 48, 120, 0), rgba(28, 48, 120, 0)),
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  border: 2px solid rgb(255, 255, 255);
+  width: 50%;
+  height: max-content;
+  border-radius: 8px;
+  margin-left: 25%;
+  margin-top: 3%;
+  color: white;
+  padding: 5px;
+}
+
+#text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+#text span {
+  margin-bottom: 1px;
+}
+
+#scores {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  letter-spacing: 1px;
+  background-color: white;
+  height: 7rem;
+  width: 7rem;
+  margin-top: 2px;
+  padding: 0%;
+  border-radius: 6px;
+  text-align: center;
+  color: #656565;
+}
+
+.pla {
+  font-size: 2.2vh;
+  line-height: 0%;
+}
+
+.inc {
+  font-size: 8vh;
+  font-weight: bolder;
+  color: #252525
+}
+
+/* Game */
+.game {
+  position: relative;
+  display: grid;
+  grid-template-columns: (repeat(2, 7fr));
+  grid-template-areas:
+    "rock scissors"
+    "paper paper";
+  place-items: center;
+  height: 32rem;
+  width: 38rem;
+  margin: auto;
+}
+
+.game::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 32%;
+  left: 26%;
+  background: url("/src/images/bg-linez.svg") no-repeat;
+  z-index: -1;
+}
+
+.choice-btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.choice {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
   
-  }
-  
-  ul {
-    list-style-type: none;
-    line-height: 30px;
-  }
-  
-  #heading {
-    display: flex;
-    justify-content: space-between;
-    background-color: linear-gradient(0deg, rgba(28, 48, 120, 0), rgba(28, 48, 120, 0)),
-      linear-gradient(0deg, #FFFFFF, #FFFFFF);
-    border: 2px solid rgb(255, 255, 255);
-    width: 60%;
-    border-radius: 8px;
-    margin-left: 20%;
-    margin-top: 3%;
-    color: white;
-    padding: 5px;
-  }
-  
-  #text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
-  
-  #text span {
-    margin-bottom: 1px;
-  }
-  
-  #scores {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .box {
-    background-color: white;
-    padding: 10px;
-    height: 4rem;
-    width: 4rem;
-    border-radius: 5px;
-    text-align: center;
-    color: #656565;
-  }
-  
-  .pla {
-    font-size: 2vh;
-    line-height: 0%;
-  }
-  
-  .inc {
-    font-size: 6vh;
-    font-weight: bolder;
-    color: #252525
-  }
-  
-  
-  
-  .secpart{
-    display: flex;
-              flex-direction: column;
-              align-items: center;
-              position: relative;
-  }
-  
-  .images {
-    display: flex;
-    justify-content: space-between;
-    width: 300px; /* Adjust the container width as needed */
-    margin-top: 20px; /* Adjust the margin between combined images as needed */      
-  } 
-  
-  .paired {
-    position: relative;
-              width: 100px; /* Adjust the combined image width as needed */
-              height: auto;
-  }
-  .circle {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-  }
-  
-  .hand {
-    position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 40px; /* Adjust the icon image size as needed */
-              height: auto;
-  }
-  
-  
-  
-  .line-image {
-              width: 20px; /* Adjust the line image width as needed */
-              height: 100px; /* Adjust the line image height as needed */
-  }
-              
-  /* Specific positioning for the first image pair  */
-  .paired:nth-child(1) {
-    margin-right: 50px;
-  }
-  
-  /* Specific positioning for the second image pair */
-  .paired:nth-child(2) {
-    margin-left: 25px; /* Adjust the margin between combined images as needed */
-    margin-right: 25px;
-    
-  }
-  
-  /* Specific positioning for the third image pair */
-  .paired:nth-child(3) .hand{
-    margin-left: 1px; /* Adjust the margin between combined images as needed */
-  }
-  
-  .line-image {
-    position: absolute;
-  }
-  
-  .line-1 {
-    top: 50%;
-    left: calc(50% - 15px); /* Adjust the left position as needed */
-  }
-  
-  .line-2 {
-    top: calc(50% - 75px); /* Adjust the top position as needed */
-    left: calc(50% - 65px); /* Adjust the left position as needed */
-    transform: rotate(60deg);
-  }
-  
-  .line-3 {
-    top: calc(10% + 75px); /* Adjust the top position as needed */
-    left: calc(50% - 45px); /* Adjust the left position as needed */
-    transform: rotate(-90deg);
-  }
-  #sci{
-    width: 25px;
-  } 
-  .pep{
-    margin-top: 80%;
-  }
+}
+
+.choice::before,
+.choice::after {
+  content: "";
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.choice::after {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+.choice-btn:focus .choice::after {
+  opacity: 1;
+  z-index: -2;
+  box-shadow: 0px 2px 92px 0px #00000021 , 0 3px 0 3rem #2E9A2563; 
+
+}
+
+.choice img {
+  transform: scale(1);
+}
+
+.choice.rock::before {
+  background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+.choice.paper::before {
+  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+.choice.scissors::before {
+  background: linear-gradient(to bottom, hsl(284, 100%, 50%),hsl(285,98%,50%));
+}
+
+.choice-btn[data-choice="paper"] {
+  grid-area: paper;
+}
+.choice-btn[data-choice="scissors"] {
+  grid-area: scissors;
+}
+.choice-btn[data-choice="rock"] {
+  grid-area: rock;
+}
