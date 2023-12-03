@@ -7,7 +7,7 @@
   <title>Stone Paper Scissor</title>
   <link rel="stylesheet" href="src/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
+<script src="/src/rule.js" defer></script>
 </head>
 
 <body>
@@ -69,21 +69,21 @@
 
 
     <!--rules button  -->
-    <button class="rules_btn" onclick="showRules()">RULES</button>
-    <div class="Rules" id="rulesContainer">
+    <button class="rules_btn"  id="game_rule">RULES</button>
+    <div class="rules" id="rulesContainer">
       <div class="rules_container">
         <header class="outline">
-          <button class="close_btn" onclick="hideRules()">
+          <button class="close_btn" >
             <img src="src/images/closee.svg" alt="Close Button" />
           </button>
           <h2 class="heading">Game Rules</h2>
-          <ul style="list-style-type: square; color: white;">
-            <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
-            <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.” <br><br></li>
-            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time <br><br></li>
-            <li>If both players lay down the same hand, each player lays down another hand <br><br></li>
-          </ul>
         </header>
+        <ul style="list-style-type: square; color: white;">
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
+          <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.” <br><br></li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time <br><br></li>
+          <li>If both players lay down the same hand, each player lays down another hand <br><br></li>
+        </ul>
       </div>
     </div>
 

@@ -273,7 +273,7 @@ body {
   outline: none;
   border: none;
   cursor: pointer;
-  right: 8rem; 
+  right: 1rem; 
 }
 
 .show_rules{
@@ -281,7 +281,7 @@ body {
   pointer-events: initial;
 }
 
-.Rules {
+.rules {
   position: absolute;
   top: 10rem; 
   right: 3rem; 
@@ -312,11 +312,6 @@ body {
   color: #FFD600; 
   margin-bottom: 3rem; 
 }
-.close_btn{
-  position: absolute;
-  right: 1rem;
-
-}
 .heading{
   text-align: center;
   color: #FFFFFF;
@@ -326,3 +321,4 @@ body {
 .hidden{
   display: none;
 }
+

@@ -1,158 +1,109 @@
-body {
-  background-color: #8CC461;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
+html par
+<!--rules button  -->
+    <button class="rules_btn" >RULES</button>
+    <div class="rules" id="rulesContainer">
+      <div class="rules_container">
+        <header class="outline">
+          <button class="close_btn" >
+            <img src="src/images/closee.svg" alt="Close Button" />
+          </button>
+          <h2 class="heading">Game Rules</h2>
+        </header>
+        <ul style="list-style-type: square; color: white;">
+          <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
+          <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.” <br><br></li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time <br><br></li>
+          <li>If both players lay down the same hand, each player lays down another hand <br><br></li>
+        </ul>
+      </div>
+    </div>
 
-}
+#javascript part
 
-ul {
-  list-style-type: none;
-  line-height: 30px;
-}
+    const btnRules = document.querySelector(".rules_btn");
+const btnClose = document.querySelector(".close_btn");
+const modalRules = document.querySelector(".rules");
+
+btnRules.addEventListener("click", () => {
+  modalRules.classList.toggle(".show_rules");
+});
+
+btnClose.addEventListener("click", () => {
+  modalRules.classList.toggle(".show_rules");
+});
 
 
-#heading {
-  display: flex;
-  justify-content: space-between;
-  background-color: linear-gradient(0deg, rgba(28, 48, 120, 0), rgba(28, 48, 120, 0)),
-    linear-gradient(0deg, #FFFFFF, #FFFFFF);
-  border: 2px solid rgb(255, 255, 255);
-  width: 50%;
-  height: max-content;
-  border-radius: 8px;
-  margin-left: 25%;
-  margin-top: 3%;
-  color: white;
-  padding: 5px;
-}
+#css part
 
-#text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-#text span {
-  margin-bottom: 1px;
-}
-
-#scores {
-  display: flex;
-  gap: 10px;
-}
-
-.box {
-  letter-spacing: 1px;
-  background-color: white;
-  height: 7rem;
-  width: 7rem;
-  margin-top: 2px;
-  padding: 0%;
-  border-radius: 6px;
-  text-align: center;
-  color: #656565;
-}
-
-.pla {
-  font-size: 2.2vh;
-  line-height: 0%;
-}
-
-.inc {
-  font-size: 8vh;
-  font-weight: bolder;
-  color: #252525
-}
-
-/* Game */
-.game {
-  position: relative;
-  display: grid;
-  grid-template-columns: (repeat(2, 7fr));
-  grid-template-areas:
-    "rock scissors"
-    "paper paper";
-  place-items: center;
-  height: 32rem;
-  width: 38rem;
-  margin: auto;
-}
-
-.game::before {
-  content: "";
+.rules_btn {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 32%;
-  left: 26%;
-  background: url("/src/images/bg-linez.svg") no-repeat;
-  z-index: -1;
-}
-
-.choice-btn {
-  border: none;
-  outline: none;
+  bottom: 1rem;
+  right: 1.5rem;
   background: none;
   cursor: pointer;
-}
-.choice {
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-  background: #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  color: #FFFFFF;
+  padding: 0.3rem 1.3rem;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
 }
 
-.choice::before,
-.choice::after {
-  content: "";
+.close_btn {
   position: absolute;
-  left: -15%;
-  top: -15%;
-  width: 130%;
-  height: 130%;
-  border-radius: 50%;
-  z-index: -1;
+  top: -4rem; 
+  width: 1rem;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  right: 1rem; 
 }
 
-.choice::after {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-.choice-btn:focus .choice::after {
+.show_rules{
   opacity: 1;
-  z-index: -2;
-  box-shadow: 0px 2px 92px 0px #00000021 , 0 3px 0 3rem #2E9A2563; 
-
+  pointer-events: initial;
 }
 
-.choice img {
-  transform: scale(1);
+.rules {
+  position: absolute;
+  top: 10rem; 
+  right: 3rem; 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.choice.rock::before {
-  background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-}
-.choice.paper::before {
-  background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-}
-.choice.scissors::before {
-  background: linear-gradient(to bottom, hsl(284, 100%, 50%),hsl(285,98%,50%));
+.rules_container {
+  width: 17rem;
+  height: 19rem;
+
+  border: 5px solid #FFFFFF;
+  border-radius: 15px;
+  list-style-type: square;
+  background-color: #004429; 
+  padding: 1rem; 
 }
 
-.choice-btn[data-choice="paper"] {
-  grid-area: paper;
+.rules_container ul {
+  color: #FFFFFF; 
+  font-size: 15px; 
+  list-style-type: square;
+  padding-left: 1rem; 
 }
-.choice-btn[data-choice="scissors"] {
-  grid-area: scissors;
+
+.rules_container li::marker {
+  color: #FFD600; 
+  margin-bottom: 3rem; 
 }
-.choice-btn[data-choice="rock"] {
-  grid-area: rock;
+.heading{
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0%;
+}
+
+.hidden{
+  display: none;
 }
