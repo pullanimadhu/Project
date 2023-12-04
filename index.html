@@ -20,7 +20,7 @@
         <span>SCISSOR</span>
       </div>
       <div id="scores">
-        <div class="box" id="computer_score">
+        <div class="box" id="computer_sc">
           <p class="pla">COMPUTER</p>
           <p class="pla">SCORE</p>
           <span class="inc" id="computer-score">0</span>
@@ -67,16 +67,15 @@
     </section>
 
 
-
-    <!--rules button  -->
-    <button class="rules_btn"  id="game_rule">RULES</button>
-    <div class="rules" id="rulesContainer">
-      <div class="rules_container">
-        <header class="outline">
-          <button class="close_btn" >
-            <img src="src/images/closee.svg" alt="Close Button" />
+    <div class="button-container">
+    <button class="rules-btn" onclick="">Rules</button>
+    <div class="modal">
+      <div class="modal__container">
+        <header class="modal__header">
+          <h2 class="modal__heading">Game Rules</h2>
+          <button class="close-btn">
+            <img src="/src/images/closee.svg" alt="Close Button" />
           </button>
-          <h2 class="heading">Game Rules</h2>
         </header>
         <ul style="list-style-type: square; color: white;">
           <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
@@ -88,8 +87,9 @@
     </div>
 
 
-   
-
+    <button class="next-btn" hidden>Next</button>
+    </div>
+    
 
 
 

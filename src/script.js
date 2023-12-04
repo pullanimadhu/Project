@@ -8,8 +8,12 @@ const playAgainBtn = document.querySelector(".play-again");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 
-let userScore = 0;
-let aiscore = 0;
+// Retrieve the user and computer scores from local storage, or default to 0
+let userScore = parseInt(localStorage.getItem('user-score')) || 0;
+let aiscore = parseInt(localStorage.getItem('computer-score')) || 0;
+
+// Update the scores in the UI during page load
+updateScore();
 
 const CHOICES = [
   {
@@ -46,6 +50,8 @@ playAgainBtn.addEventListener("click", () => {
   resultText.innerText = "";
   resultWinner.classList.toggle("hidden");
   resultsDiv.classList.toggle("show-winner");
+
+  updateScore();
 });
 
 function choose(choice) {
@@ -79,26 +85,42 @@ function displayWinner(results) {
     const userWins = isWinner(results);
     const aiWins = isWinner(results.reverse());
 
+    const buttonContainer = document.querySelector('.button-container');
+    const nextButton = document.querySelector('.next-btn');
+    const rulesButton = document.querySelector('.rules-btn');
+
+    nextButton.style.display = 'none';
+    rulesButton.style.display = 'inline-block';
+
     if (userWins) {
-      resultText.innerText = "You win!";
+      resultText.innerHTML = '<p style="font-size: 30px; margin:0; letter-spacing:5px;">YOU WIN</p>'; 
+      resultText.innerHTML += '<p style="font-size: 22px; margin:0; letter-spacing: 2px;">AGAINST PC</p>';   
       resultDivs[0].classList.toggle("winner");
       userScore++;
+
+      nextButton.style.display = 'inline-block';
+      rulesButton.style.display = 'inline-block';
+      nextButton.style.order = 1;
+      rulesButton.style.order = 2;
     } else if (aiWins) {
-      resultText.innerText = "You lose!";
+      resultText.innerHTML = '<P style="font-size: 30px; margin:0; letter-spacing: 5px;">YOU LOSE</P>';
+      resultText.innerHTML += '<p style="font-size: 22px; margin:0; letter-spacing: 2px;">AGAINST PC</p>';
       resultDivs[1].classList.toggle("winner");
       aiscore++;
+      nextButton.style.order = 2;
+      rulesButton.style.order = 1;
     } else {
-      resultText.innerText = "It's a draw!";
+      resultText.innerText = "TIE UP";
+      nextButton.style.order = 2;
+      rulesButton.style.order = 1;
     }
 
     resultWinner.classList.toggle("hidden");
     resultsDiv.classList.toggle("show-winner");
 
     updateScore();
-  }, 1000);
+  }, 500);
 }
-
-
 
 function isWinner(results) {
   return results[0].beats === results[1].name;
@@ -107,4 +129,13 @@ function isWinner(results) {
 function updateScore() {
   playerScore.innerText = userScore;
   computerScore.innerText = aiscore;
+
+  // Save the scores to local storage
+  localStorage.setItem('userScore', userScore);
+  localStorage.setItem('computerScore', aiscore);
 }
+
+const nextButton = document.querySelector('.next-btn');
+nextButton.addEventListener('click', () => {
+  window.location.href = "index1.html";
+});

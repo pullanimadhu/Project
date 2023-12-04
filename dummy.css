@@ -1,44 +1,62 @@
-html par
-<!--rules button  -->
-    <button class="rules_btn" >RULES</button>
-    <div class="rules" id="rulesContainer">
-      <div class="rules_container">
-        <header class="outline">
-          <button class="close_btn" >
-            <img src="src/images/closee.svg" alt="Close Button" />
-          </button>
-          <h2 class="heading">Game Rules</h2>
-        </header>
-        <ul style="list-style-type: square; color: white;">
-          <li>Rock beats scissors, scissors beat paper, and paper beats rock. <br><br></li>
-          <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.” <br><br></li>
-          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time <br><br></li>
-          <li>If both players lay down the same hand, each player lays down another hand <br><br></li>
-        </ul>
-      </div>
-    </div>
-
-#javascript part
-
-    const btnRules = document.querySelector(".rules_btn");
-const btnClose = document.querySelector(".close_btn");
-const modalRules = document.querySelector(".rules");
-
-btnRules.addEventListener("click", () => {
-  modalRules.classList.toggle(".show_rules");
-});
-
-btnClose.addEventListener("click", () => {
-  modalRules.classList.toggle(".show_rules");
-});
-
-
-#css part
-
-.rules_btn {
+html,body{
+  background-color: #8CC461;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.stars{
+  position: relative;
+  margin: auto;
+  width: 20rem;
+  height: 20rem;
+}
+.cup{
   position: absolute;
-  bottom: 1rem;
-  right: 1.5rem;
+  top: 23.56%;
+  left: 44.5%;
+  width: 8rem;
+  height: 8rem;
+}
+div{
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bug{
+  line-height: 0;
+  font-weight: 700;
+  letter-spacing: 7px;
+  font-size: 3.6rem;
+}
+.error{
+  line-height: 4rem;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.playbtn{
+  position: relative;
+  top:74%;
+  margin: 10px 5px;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+  color:rgba(107, 107, 107, 1);
+  padding: 0.3rem 1.3rem;
+  font-family: inherit;
+  text-transform: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+.rulbtn{
+  
+  position: relative;
+  right: -44%;
+  margin: 10px 5px;
   background: none;
   cursor: pointer;
   border: 2px solid #FFFFFF;
@@ -49,61 +67,4 @@ btnClose.addEventListener("click", () => {
   text-transform: inherit;
   font-size: 1.3rem;
   letter-spacing: 0.1em;
-}
-
-.close_btn {
-  position: absolute;
-  top: -4rem; 
-  width: 1rem;
-  background: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  right: 1rem; 
-}
-
-.show_rules{
-  opacity: 1;
-  pointer-events: initial;
-}
-
-.rules {
-  position: absolute;
-  top: 10rem; 
-  right: 3rem; 
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  pointer-events: none;
-}
-
-.rules_container {
-  width: 17rem;
-  height: 19rem;
-
-  border: 5px solid #FFFFFF;
-  border-radius: 15px;
-  list-style-type: square;
-  background-color: #004429; 
-  padding: 1rem; 
-}
-
-.rules_container ul {
-  color: #FFFFFF; 
-  font-size: 15px; 
-  list-style-type: square;
-  padding-left: 1rem; 
-}
-
-.rules_container li::marker {
-  color: #FFD600; 
-  margin-bottom: 3rem; 
-}
-.heading{
-  text-align: center;
-  color: #FFFFFF;
-  margin: 0%;
-}
-
-.hidden{
-  display: none;
 }

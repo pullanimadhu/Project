@@ -1,11 +1,15 @@
-const rulesbtn = document.getElementById('.rules_btn')
-const closebtn = document.querySelector('.close_btn')
-const tim = document.querySelector('.rules')
+const btnRules = document.querySelector(".rules-btn");
+const btnClose = document.querySelector(".close-btn");
+const modalRules = document.querySelector(".modal");
 
-rulesbtn.addEventListener('click' , () =>{
-    tim.classList.toggle('show_rules')
-});
-closebtn.addEventListener('click' , () =>{
-    tim.classList.toggle('show_rules')
+btnRules.addEventListener("click", () => {
+    modalRules.classList.toggle("show-modal");
+  });
+  btnClose.addEventListener("click", () => {
+    modalRules.classList.toggle("show-modal");
+  });
 
-})
+
+
+// const buttonContainer = document.querySelector('.button-container');
+// const nextButton = document.querySelector('.next-btn');
